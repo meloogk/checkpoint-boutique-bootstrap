@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style de la barre de navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #000000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    font-family: 'Arial', sans-serif;
+    color: #ff5722;
+    font-size: 1.8rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ff0404;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffda22;
+}
+
+/* Section Hero */
+.background-hero {
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+.hero h1 {
+    font-size: 4vw;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.hero h2 {
+    font-size: 2vw;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.hero .btn-warning {
+    padding: 10px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero .btn-warning:hover {
+    background-color: #e65100;
+    transform: scale(1.05);
+}
+
+/* Section Produits Phares */
+.products {
+    background-color: #ffffff;
+    padding: 40px 5%;
+}
+
+.products h2 {
+    font-size: 3vw;
+    color: #000000;
+    text-align: center;
+}
+
+.card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    color: #ff5722;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+    margin: 10px 0;
+}
+
+.btn-primary {
+    background-color: #ff0000;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #ffb700;
+}
+
+/* Formulaire de Contact */
+.contact {
+    background-color: #e4e4e4;
+    padding: 40px 5%;
+}
+
+.contact h2 {
+    font-size: 3vw;
+    color: #cf0c0c;
+    text-align: center;
+}
+
+.contact form {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #000000;
+}
+
+.form-control {
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #413f3f;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #ff5722;
+    box-shadow: none;
+}
+
+.btn-success {
+    background-color: #a72828;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px 5%;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.social-icons a {
+    color: #f6130b;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ffcb22;
+}
+
+/* media query pour les petites tailles d'écran */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    .hero {
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+
+    .products h2,
+    .contact h2 {
+        font-size: 2rem;
+    }
+
+    .card-img-top {
+        height: 250px;
+    }
+    
+    .form-control {
+        width: 100%;
+    }
+}
+
+/* media query pour les très grandes tailles d'écran */
+@media (min-width: 1200px) {
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero h2 {
+        font-size: 1.75rem;
+    }
+
+    .products h2,
+    .contact h2 {
+        font-size: 3.5rem;
+    }
+}
+
